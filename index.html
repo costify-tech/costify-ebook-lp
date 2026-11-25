@@ -92,6 +92,10 @@
                         Ada kebocoran kecil yang terjadi setiap hari
                         dan perlahan menggerus profit.
 
+                        <br><br>
+                        E-book ini membantu Anda melihat ke mana saja uang bisa
+                        “menghilang” di operasional, dengan bahasa sederhana.
+
                     </p>
 
 
@@ -105,6 +109,7 @@
                         </a>
 
                         <a
+                            id="videoLink"
                             href="#video"
                             class="btn btn-secondary"
                         >
@@ -112,6 +117,9 @@
                         </a>
 
                     </div>
+
+
+                    <p class="hero-micro">Gratis · Langsung dikirim ke email Anda</p>
 
 
                     <div class="trust-points">
@@ -158,6 +166,7 @@
         <section
             id="video"
             class="section section-light"
+            hidden
         >
 
             <div class="container narrow">
@@ -187,7 +196,7 @@
                 <div class="video-wrapper">
 
                     <iframe
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+                        id="videoFrame"
                         title="Costify — Resto Ramai Tapi Profit Tipis"
                         loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -442,8 +451,8 @@
                                 </strong>
 
                                 <small>
-                                    Mulai melihat waste, stok,
-                                    HPP, dan biaya yang sering luput.
+                                    Mulai melihat over portion, over purchase,
+                                    over production, dan waste yang sering luput.
                                 </small>
 
                             </div>
@@ -633,6 +642,63 @@
 
 
         <!-- =================================================
+             KREDIBILITAS
+             (tambahkan nama + foto Anda di sini bila ingin)
+        ================================================== -->
+
+        <section class="section section-light author-section">
+            <div class="container narrow">
+                <div class="author-card">
+                    <div class="author-stat">
+                        <strong>30</strong>
+                        <span>tahun di operasional F&amp;B</span>
+                    </div>
+                    <div>
+                        <span class="eyebrow">DI BALIK COSTIFY</span>
+                        <h2>Dibuat dari lapangan, <span>bukan dari teori.</span></h2>
+                        <p>
+                            E-book dan sistem Costify disusun oleh praktisi yang
+                            puluhan tahun berada di dapur, gudang, dan kasir
+                            bisnis F&amp;B. Setiap contoh berangkat dari masalah
+                            yang benar-benar terjadi di outlet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             FAQ
+        ================================================== -->
+
+        <section class="section faq-section">
+            <div class="container narrow">
+                <div class="section-heading centered">
+                    <span class="eyebrow">PERTANYAAN UMUM</span>
+                    <h2>Sebelum Anda <span>mengunduh.</span></h2>
+                </div>
+                <details class="faq-item">
+                    <summary>Benar-benar gratis?</summary>
+                    <p>Ya. Tidak ada biaya untuk mengunduh e-book ini.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Cocok untuk kafe, warkop, atau usaha kecil?</summary>
+                    <p>Cocok. Pembahasannya untuk semua pemilik usaha F&amp;B yang ingin tahu ke mana uang bisnisnya pergi, dari satu outlet sampai beberapa cabang.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Bagaimana saya menerima e-book-nya?</summary>
+                    <p>Setelah mengisi form, Anda mendapat tombol unduh langsung dan e-book juga dikirim ke email Anda.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Apakah data saya aman?</summary>
+                    <p>Data hanya dipakai untuk mengirim e-book dan informasi Costify yang relevan. Anda bisa berhenti berlangganan kapan saja.</p>
+                </details>
+            </div>
+        </section>
+
+
+        <!-- =================================================
              FINAL CTA + FORM
         ================================================== -->
 
@@ -650,22 +716,20 @@
                     </span>
 
                     <h2>
-                        Kenali bisnis Anda
+                        Uang bisa bocor setiap hari
                         <span>
-                            sebelum mengambil keputusan.
+                            tanpa Anda sadari.
                         </span>
                     </h2>
 
                     <p>
 
-                        Dapatkan
-                        <strong>
-                            Rame Tapi Tidak Tenang
-                        </strong>
-
-                        secara gratis dan mulai melihat
-                        bisnis dari sudut pandang profit,
-                        bukan sekadar omzet.
+                        Over portion, over purchase, over production, waste yang tidak terkontrol,
+                        dan stok yang tidak konsisten: kebocoran yang terlihat sepele,
+                        tapi terjadi setiap hari. Baca
+                        <strong>Rame Tapi Tidak Tenang</strong>,
+                        lalu cocokkan dengan kondisi usaha Anda.
+                        Kalau tidak cocok, tidak ada yang Anda rugikan.
 
                     </p>
 
@@ -694,13 +758,12 @@
                     <div id="leadFormContainer">
 
                         <h3>
-                            Dapatkan E-book Gratis
+                            Temukan <span>kebocoran profit</span> yang tidak pernah Anda sadari
                         </h3>
 
                         <p>
-                            Masukkan nama dan email aktif.
-                            Setelah sistem email terhubung,
-                            e-book akan dikirim otomatis.
+                            Isi data singkat di bawah (kurang dari 1 menit).
+                            E-book bisa Anda baca hari ini juga, gratis.
                         </p>
 
 
@@ -785,18 +848,43 @@
                             </div>
 
 
+                            <div class="form-group">
+                                <label for="businessType">Jenis usaha</label>
+                                <select id="businessType" name="businessType" aria-describedby="businessTypeError" required>
+                                    <option value="">Pilih jenis usaha</option>
+                                    <option>Restoran</option>
+                                    <option>Kafe / Coffee Shop</option>
+                                    <option>Warkop / Kedai Minuman</option>
+                                    <option>Warung Makan / UMKM</option>
+                                    <option>Lainnya</option>
+                                </select>
+                                <small id="businessTypeError" class="error" aria-live="polite"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="revenue">Omzet per bulan (perkiraan)</label>
+                                <select id="revenue" name="revenue" aria-describedby="revenueError" required>
+                                    <option value="">Pilih kisaran omzet</option>
+                                    <option value="kecil">Di bawah Rp 30 juta</option>
+                                    <option value="menengah">Rp 30 – 100 juta</option>
+                                    <option value="besar">Di atas Rp 100 juta</option>
+                                </select>
+                                <small id="revenueError" class="error" aria-live="polite"></small>
+                            </div>
+
+
                             <button
                                 type="submit"
                                 class="btn btn-submit"
                             >
-                                Kirim E-book ke Email Saya
+                                Kirim E-book Gratis Saya
                             </button>
 
 
                             <p class="privacy">
-                                🔒 Data Anda digunakan untuk
-                                mengirim e-book dan informasi
-                                Costify yang relevan.
+                                🔒 Tanpa biaya, tanpa kewajiban. Data hanya untuk
+                                mengirim e-book dan informasi Costify yang relevan;
+                                berhenti kapan saja.
                             </p>
 
                         </form>
@@ -804,47 +892,7 @@
                     </div>
 
 
-                    <!-- SUCCESS -->
-
-                    <div
-                        id="successMessage"
-                        class="success-message"
-                        aria-live="polite"
-                    >
-
-                        <div class="success-icon">
-                            ✓
-                        </div>
-
-                        <h3>
-                            Terima kasih!
-                        </h3>
-
-                        <p>
-                            E-book <strong>Rame Tapi Tidak Tenang</strong><br>
-                            akan kami kirimkan ke email Anda.
-                        </p>
-
-                        <p>
-                            Mohon cek <strong>Inbox / Primary</strong>.<br>
-                            Jika belum ditemukan, periksa juga folder<br>
-                            <strong>Promosi, Update, atau Spam</strong>.
-                        </p>
-
-                        <p>
-                            <strong>Selamat membaca.</strong>
-                        </p>
-
-
-                        <button
-                            id="backButton"
-                            class="text-button"
-                            type="button"
-                        >
-                            Kembali ke form
-                        </button>
-
-                    </div>
+                    
 
                 </div>
 
@@ -892,6 +940,10 @@
 
     </footer>
 
+
+    <div class="sticky-cta" id="stickyCta">
+        <a href="#download" class="btn btn-primary">Saya Mau E-book Gratis</a>
+    </div>
 
     <script src="script.js"></script>
 
